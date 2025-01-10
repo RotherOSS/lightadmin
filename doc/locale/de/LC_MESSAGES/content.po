@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: OTOBO Installation Guide rel-11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-16 10:11+0200\n"
-"PO-Revision-Date: 2024-07-08 06:55+0000\n"
+"PO-Revision-Date: 2025-01-10 10:21+0000\n"
 "Last-Translator: Markus Hlinka <mah@rother-oss.com>\n"
 "Language-Team: German <http://weblate.otobo.org/projects/manual-lightadmin/"
 "master/de/>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4.2\n"
+"X-Generator: Weblate 5.8.4\n"
 "Generated-By: Babel 2.4.0\n"
 
 #: ../../content/index.rst:16
 msgid "Sacrifice to Sphinx"
-msgstr ""
+msgstr "Sacrifice to Sphinx"
 
 #: ../../content/index.rst:19
 msgid "Description"
@@ -35,6 +35,10 @@ msgid ""
 "granted restricted admin permissions to ticket notifications and "
 "templates which are linked to queues the user has access to."
 msgstr ""
+"Das Modul fügt eine eingeschränkte Administrationsfunktionalität hinzu. "
+"Damit können Agenten eingeschränkte Administratorrechte für "
+"Ticketbenachrichtigungen und Vorlagen erhalten, die mit Warteschlangen "
+"verknüpft sind, auf die der Benutzer Zugriff hat."
 
 #: ../../content/index.rst:24
 msgid "System requirements"
@@ -42,7 +46,7 @@ msgstr "Systemvoraussetzungen"
 
 #: ../../content/index.rst:27
 msgid "Framework"
-msgstr ""
+msgstr "Framework"
 
 #: ../../content/index.rst:28
 msgid "OTOBO 10.1.x"
@@ -54,7 +58,7 @@ msgstr "Pakete"
 
 #: ../../content/index.rst:32 ../../content/index.rst:36
 msgid "\\-"
-msgstr ""
+msgstr "\\-"
 
 #: ../../content/index.rst:35
 msgid "Third-party software"
@@ -62,13 +66,16 @@ msgstr "Drittanbietersoftware"
 
 #: ../../content/index.rst:39
 msgid "Usage"
-msgstr ""
+msgstr "Verwendung"
 
 #: ../../content/index.rst:41
 msgid ""
 "The module adds a light admin functionality. Using this, agents can be "
 "granted restricted admin permissions to the following areas:"
 msgstr ""
+"Das Modul fügt eine eingeschränkte Administrationsfunktionalität hinzu. "
+"Damit können Agenten eingeschränkte Adminrechte für die folgenden Bereiche "
+"erhalten:"
 
 #: ../../content/index.rst:43
 msgid "Ticket notifications"
@@ -76,7 +83,7 @@ msgstr "Ticketbenachrichtigungen"
 
 #: ../../content/index.rst:44
 msgid "Templates including attachments and linked queues"
-msgstr ""
+msgstr "Vorlagen mit Anhängen und verknüpften Queues"
 
 #: ../../content/index.rst:46
 msgid ""
@@ -84,12 +91,17 @@ msgid ""
 "access to ticket notifications and templates in general. Regarding the "
 "access, three states are distinguished:"
 msgstr ""
+"Nach der Installation und Konfiguration des Pakets hat der Light-Admin-"
+"Benutzer Zugriff auf Ticketbenachrichtigungen und Vorlagen im Allgemeinen. "
+"Hinsichtlich des Zugriffs werden drei Zustände unterschieden:"
 
 #: ../../content/index.rst:48
 msgid ""
 "Light admin user has full access if he has rw access on all queues which "
 "affect the object."
 msgstr ""
+"Der Benutzer Light Admin hat vollen Zugriff, wenn er rw-Zugriff auf alle "
+"Queues hat, die das Objekt betreffen."
 
 #: ../../content/index.rst:49
 msgid ""
@@ -99,115 +111,131 @@ msgid ""
 " of ticket notifications no explicit queue means 'in use for all queues' "
 "and thus likely ro access (depending on the rights of the agent)."
 msgstr ""
+"Ein Light-Admin-Benutzer kann das Objekt ansehen, aber nicht bearbeiten, "
+"wenn er mindestens ro-Zugriff auf eine der Queues hat, die das Objekt "
+"betreffen. Im Falle von Vorlagen bedeutet keine explizite Queue \"in "
+"Verwendung für keine Queue\" und somit rw-Zugriff. Bei "
+"Ticketbenachrichtigungen bedeutet keine explizite Queue \"in Verwendung für "
+"alle Queues\" und damit wahrscheinlich ro-Zugriff (abhängig von den Rechten "
+"des Agenten)."
 
 #: ../../content/index.rst:50
 msgid ""
 "Object is related to queues on which the user has no permissions at all. "
 "These objects are hidden."
 msgstr ""
+"Objekt bezieht sich auf Queues, für die der Benutzer keinerlei "
+"Berechtigungen hat. Diese Objekte sind ausgeblendet."
 
 #: ../../content/index.rst:53
 msgid "Setup"
-msgstr ""
+msgstr "Einrichtung"
 
 #: ../../content/index.rst:55
 msgid ""
 "The permissions can be assigend to every group. For convenience reasons, "
 "a specialised light admin group can be created."
 msgstr ""
+"Die Berechtigungen können jeder Gruppe zugewiesen werden. Der Einfachheit "
+"halber kann eine spezielle Light-Admin-Gruppe erstellt werden."
 
 #: ../../content/index.rst:57
 msgid ""
 "To grant light admin permissions to the group, it has to be added to "
 "GroupRo in the following system configuration settings:"
 msgstr ""
+"Um der Gruppe eingeschränkte Adminrechte zu gewähren, muss sie in den "
+"folgenden Systemkonfigurationseinstellungen zu GroupRo hinzugefügt werden:"
 
 #: ../../content/index.rst:61
 msgid "Enable restricted access to the general admin:"
 msgstr ""
+"Aktivieren Sie den eingeschränkten Zugriff auf die allgemeine Verwaltung:"
 
 #: ../../content/index.rst:60
 msgid "Frontend::Module###Admin"
-msgstr ""
+msgstr "Frontend::Module###Admin"
 
 #: ../../content/index.rst:61
 msgid "Frontend::Navigation###Admin###001-Framework"
-msgstr ""
+msgstr "Frontend::Navigation###Admin###001-Framework"
 
 #: ../../content/index.rst:65
 msgid "Include notifications:"
-msgstr ""
+msgstr "Benachrichtigungen einschließen:"
 
 #: ../../content/index.rst:64
 msgid "Frontend::NavigationModule###AdminNotificationEvent"
-msgstr ""
+msgstr "Frontend::NavigationModule###AdminNotificationEvent"
 
 #: ../../content/index.rst:65
 msgid "Frontend::Module###AdminNotificationEvent"
-msgstr ""
+msgstr "Frontend::Module###AdminNotificationEvent"
 
 #: ../../content/index.rst:75
 msgid "Include templates:"
-msgstr ""
+msgstr "Vorlagen einbeziehen:"
 
 #: ../../content/index.rst:68
 msgid "Frontend::NavigationModule###AdminTemplate"
-msgstr ""
+msgstr "Frontend::NavigationModule###AdminTemplate"
 
 #: ../../content/index.rst:69
 msgid "Frontend::NavigationModule###AdminTemplateAttachment"
-msgstr ""
+msgstr "Frontend::NavigationModule###AdminTemplateAttachment"
 
 #: ../../content/index.rst:70
 msgid "Frontend::NavigationModule###AdminQueueTemplates"
-msgstr ""
+msgstr "Frontend::NavigationModule###AdminQueueTemplates"
 
 #: ../../content/index.rst:71
 msgid "Frontend::NavigationModule###AdminAttachment"
-msgstr ""
+msgstr "Frontend::NavigationModule###AdminAttachment"
 
 #: ../../content/index.rst:72
 msgid "Frontend::Module###AdminTemplate"
-msgstr ""
+msgstr "Frontend::Module###AdminTemplate"
 
 #: ../../content/index.rst:73
 msgid "Frontend::Module###AdminTemplateAttachment"
-msgstr ""
+msgstr "Frontend::Module###AdminTemplateAttachment"
 
 #: ../../content/index.rst:74
 msgid "Frontend::Module###AdminQueueTemplates"
-msgstr ""
+msgstr "Frontend::Module###AdminQueueTemplates"
 
 #: ../../content/index.rst:75
 msgid "Frontend::Module###AdminAttachment"
-msgstr ""
+msgstr "Frontend::Module###AdminAttachment"
 
 #: ../../content/index.rst:78
 msgid "About"
-msgstr ""
+msgstr "Über"
 
 #: ../../content/index.rst:81
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #: ../../content/index.rst:82
 msgid "Rother OSS GmbH"
-msgstr ""
+msgstr "Rother OSS GmbH"
 
 #: ../../content/index.rst:83
 msgid "Email: hello@otobo.de"
-msgstr ""
+msgstr "E-Mail: hello@otobo.de"
 
 #: ../../content/index.rst:84
 msgid "Web: https://otobo.de"
-msgstr ""
+msgstr "Web: https://otobo.de"
 
 #: ../../content/index.rst:87
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: ../../content/index.rst:88
 msgid ""
 "Author: |doc-vendor| / Version: |doc-version| / Date of release: |doc-"
 "datestamp|"
 msgstr ""
+"Autor: |doc-vendor| / Version: |doc-version| / Datum der Veröffentlichung: "
+"|doc-datestamp|"
