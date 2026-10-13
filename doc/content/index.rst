@@ -46,7 +46,7 @@ After package installation and configuration, the light admin user has access to
 Setup
 -----
 
-The permissions can be assigend to every group. For convenience reasons, a specialised light admin group can be created.
+The permissions can be assigned to every group. For convenience reasons, a specialized light admin group can be created.
 
 To grant light admin permissions to the group, it has to be added to GroupRo in the following system configuration settings:
 

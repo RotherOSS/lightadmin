@@ -35,6 +35,10 @@ msgid ""
 "granted restricted admin permissions to ticket notifications and templates "
 "which are linked to queues the user has access to."
 msgstr ""
+"A modul egyszerűsített adminisztrátori funkcionalitást ad hozzá. Ennek "
+"használatával az ügyintézők korlátozott adminisztrátori jogosultságokat "
+"kaphatnak a jegyértesítésekhez és sablonokhoz, amelyek olyan várólistákhoz "
+"vannak kapcsolva, amelyekhez a felhasználónak hozzáférése van."
 
 #: ../content/index.rst:15
 msgid "System requirements"
@@ -69,14 +73,17 @@ msgid ""
 "The module adds a light admin functionality. Using this, agents can be "
 "granted restricted admin permissions to the following areas:"
 msgstr ""
+"A modul egyszerű adminisztrátori funkcionalitást ad hozzá. Ennek "
+"használatával az ügyintézők korlátozott adminisztrátori jogosultságokat "
+"kaphatnak a következő területekre:"
 
 #: ../content/index.rst:34
 msgid "Ticket notifications"
-msgstr ""
+msgstr "Jegyértesítések"
 
 #: ../content/index.rst:35
 msgid "Templates including attachments and linked queues"
-msgstr ""
+msgstr "Sablonok, beleértve a mellékleteket és a kapcsolt várólistákat is"
 
 #: ../content/index.rst:37
 msgid ""
@@ -84,12 +91,19 @@ msgid ""
 "access to ticket notifications and templates in general. Regarding the "
 "access, three states are distinguished:"
 msgstr ""
+"A csomag telepítése és beállítása után az egyszerűsített adminisztrátori "
+"felhasználónak általános hozzáférése van a jegyértesítésekhez és a "
+"sablonokhoz. A hozzáférésre vonatkozóan három állapot kerül "
+"megkülönböztetésre:"
 
 #: ../content/index.rst:39
 msgid ""
 "Light admin user has full access if he has rw access on all queues which "
 "affect the object."
 msgstr ""
+"Az egyszerűsített adminisztrátori felhasználónak teljes hozzáférése van, ha "
+"olvasási és írási hozzáféréssel rendelkezik az objektumot érintő összes "
+"várólistához."
 
 #: ../content/index.rst:40
 msgid ""
@@ -99,12 +113,22 @@ msgid ""
 "ticket notifications no explicit queue means 'in use for all queues' and "
 "thus likely ro access (depending on the rights of the agent)."
 msgstr ""
+"Az egyszerűsített adminisztrátori felhasználó megtekinthet, de nem "
+"szerkeszthet, ha legalább csak olvasási hozzáféréssel rendelkezik az "
+"objektumot érintő várólisták legalább egyikéhez. Sablonok esetén a nem "
+"kifejezetten megadott várólista azt jelenti, hogy „nincs várólistához "
+"használatban”, és így olvasási és írási hozzáférést jelent. Jegyértesítések "
+"esetén a nem kifejezetten megadott várólista azt jelenti, hogy „az összes "
+"várólistához használatban”, és így valószínűleg csak olvasási hozzáférést "
+"jelent (az ügyintéző jogosultságaitól függően)."
 
 #: ../content/index.rst:41
 msgid ""
 "Object is related to queues on which the user has no permissions at all. "
 "These objects are hidden."
 msgstr ""
+"Az objektum olyan várólistákhoz kapcsolódik, amelyekhez a felhasználónak "
+"egyáltalán nincs jogosultsága. Ezek az objektumok rejtettek."
 
 #: ../content/index.rst:44
 msgid "Setup"
@@ -115,72 +139,78 @@ msgid ""
 "The permissions can be assigend to every group. For convenience reasons, a "
 "specialised light admin group can be created."
 msgstr ""
+"A jogosultságok minden csoporthoz hozzárendelhetők. Kényelmi okokból egy "
+"különleges egyszerűsített adminisztrátori csoport is létrehozható."
 
 #: ../content/index.rst:48
 msgid ""
 "To grant light admin permissions to the group, it has to be added to GroupRo "
 "in the following system configuration settings:"
 msgstr ""
+"Ahhoz, hogy egyszerűsített adminisztrátori jogosultságokat adjon a "
+"csoportnak, azt hozzá kell adni a „GroupRo” kulcshoz a következő "
+"rendszerbeállítási lehetőségekben:"
 
 #: ../content/index.rst:50
 msgid "Enable restricted access to the general admin:"
 msgstr ""
+"Korlátozott hozzáférés engedélyezése az általános adminisztrátor számára:"
 
 #: ../content/index.rst:51
 msgid "Frontend::Module###Admin"
-msgstr ""
+msgstr "Frontend::Module###Admin"
 
 #: ../content/index.rst:52
 msgid "Frontend::Navigation###Admin###001-Framework"
-msgstr ""
+msgstr "Frontend::Navigation###Admin###001-Framework"
 
 #: ../content/index.rst:54
 msgid "Include notifications:"
-msgstr ""
+msgstr "Értesítések felvétele:"
 
 #: ../content/index.rst:55
 msgid "Frontend::NavigationModule###AdminNotificationEvent"
-msgstr ""
+msgstr "Frontend::NavigationModule###AdminNotificationEvent"
 
 #: ../content/index.rst:56
 msgid "Frontend::Module###AdminNotificationEvent"
-msgstr ""
+msgstr "Frontend::Module###AdminNotificationEvent"
 
 #: ../content/index.rst:58
 msgid "Include templates:"
-msgstr ""
+msgstr "Sablonok felvétele:"
 
 #: ../content/index.rst:59
 msgid "Frontend::NavigationModule###AdminTemplate"
-msgstr ""
+msgstr "Frontend::NavigationModule###AdminTemplate"
 
 #: ../content/index.rst:60
 msgid "Frontend::NavigationModule###AdminTemplateAttachment"
-msgstr ""
+msgstr "Frontend::NavigationModule###AdminTemplateAttachment"
 
 #: ../content/index.rst:61
 msgid "Frontend::NavigationModule###AdminQueueTemplates"
-msgstr ""
+msgstr "Frontend::NavigationModule###AdminQueueTemplates"
 
 #: ../content/index.rst:62
 msgid "Frontend::NavigationModule###AdminAttachment"
-msgstr ""
+msgstr "Frontend::NavigationModule###AdminAttachment"
 
 #: ../content/index.rst:63
 msgid "Frontend::Module###AdminTemplate"
-msgstr ""
+msgstr "Frontend::Module###AdminTemplate"
 
 #: ../content/index.rst:64
 msgid "Frontend::Module###AdminTemplateAttachment"
-msgstr ""
+msgstr "Frontend::Module###AdminTemplateAttachment"
 
 #: ../content/index.rst:65
 msgid "Frontend::Module###AdminQueueTemplates"
-msgstr ""
+msgstr "Frontend::Module###AdminQueueTemplates"
 
 #: ../content/index.rst:66
 msgid "Frontend::Module###AdminAttachment"
-msgstr ""
+msgstr "Frontend::Module###AdminAttachment"
 
 #: ../content/index.rst:69
 msgid "About"
@@ -212,6 +242,3 @@ msgid ""
 "datestamp|"
 msgstr ""
 "Szerző: |doc-vendor| / Verzió: |doc-version| / Kiadás dátuma: |doc-datestamp|"
-
-#~ msgid "Sacrifice to Sphinx"
-#~ msgstr "Áldozat a Szfinxnek"
