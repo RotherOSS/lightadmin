@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otobo_package version="1.1">
     <Name>LightAdmin</Name>
-    <Version>10.1.0</Version>
+    <Version>0.0.0</Version>
+    <Framework>10.1.x</Framework>
     <Vendor>Rother OSS GmbH</Vendor>
-    <URL>https://rother-oss.com/</URL>
+    <URL>https://otobo.io/</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
     <Description Lang="en">Enables creating and managing of templates, attachments and ticket notifications with a queue- or group-based permission concept.</Description>
     <Description Lang="de">Erlaubt das Erstellen und Verwalten von Vorlagen, Anhängen und Ticket-Benachrichtigungen mit einer Queue-/Gruppen-basierten Berechtigung.</Description>
     <Description Lang="hu">Lehetővé teszi a sablonok, mellékletek és jegyértesítések létrehozását és kezelését várólista- vagy csoportalapú jogosultság-elképzeléssel.</Description>
-    <Framework>10.1.x</Framework>
     <Filelist>
         <File Permission="660" Location="doc/content/index.rst" />
-            <File Permission="660" Location="Custom/Kernel/Modules/AdminAttachment.pm"/>
-            <File Permission="660" Location="Custom/Kernel/Modules/AdminNotificationEvent.pm"/>
-            <File Permission="660" Location="Custom/Kernel/Modules/AdminQueueTemplates.pm"/>
-            <File Permission="660" Location="Custom/Kernel/Modules/AdminTemplate.pm"/>
-            <File Permission="660" Location="Custom/Kernel/Modules/AdminTemplateAttachment.pm"/>
-            <File Permission="660" Location="Custom/Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt"/>
-            <File Permission="660" Location="Custom/Kernel/Output/HTML/Templates/Standard/AdminNotificationEvent.tt"/>
-            <File Permission="660" Location="Custom/Kernel/Output/HTML/Templates/Standard/AdminTemplate.tt"/>
-            <File Permission="660" Location="Kernel/Language/de_LightAdmin.pm"/>
-            <File Permission="660" Location="Kernel/Language/hu_LightAdmin.pm"/>
-        <File Permission="660" Location="Kernel/System/LightAdmin.pm"/>
+        <File Permission="660" Location="Custom/Kernel/Modules/AdminAttachment.pm" />
+        <File Permission="660" Location="Custom/Kernel/Modules/AdminNotificationEvent.pm" />
+        <File Permission="660" Location="Custom/Kernel/Modules/AdminQueueTemplates.pm" />
+        <File Permission="660" Location="Custom/Kernel/Modules/AdminTemplate.pm" />
+        <File Permission="660" Location="Custom/Kernel/Modules/AdminTemplateAttachment.pm" />
+        <File Permission="660" Location="Custom/Kernel/Output/HTML/Templates/Standard/AdminAttachment.tt" />
+        <File Permission="660" Location="Custom/Kernel/Output/HTML/Templates/Standard/AdminNotificationEvent.tt" />
+        <File Permission="660" Location="Custom/Kernel/Output/HTML/Templates/Standard/AdminTemplate.tt" />
+        <File Permission="660" Location="Kernel/Language/de_LightAdmin.pm" />
+        <File Permission="660" Location="Kernel/Language/hu_LightAdmin.pm" />
+        <File Permission="660" Location="Kernel/System/LightAdmin.pm" />
     </Filelist>
 </otobo_package>
