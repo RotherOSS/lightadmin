@@ -2,9 +2,9 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2025 Rother OSS GmbH, https://otobo.io/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
-# $origin: otobo - c4729719b9788da163909113055de495fac35df4 - Kernel/Modules/AdminNotificationEvent.pm
+# $origin: otobo - ff9e297baf287e16071d3ac6ad7f6c13f11ac7fa - Kernel/Modules/AdminNotificationEvent.pm
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -827,6 +827,7 @@ sub Run {
             my $Notifications = $Kernel::OM->Get('Kernel::System::YAML')->Load( Data => $UploadStuff{Content} );
 
             my $NoPermission;
+            NOTIFICATION:
             for my $Notification ( @{$Notifications} ) {
                 $Permission = $LightAdminObject->QueueListPermission(
                     QueueIDs => $Notification->{Data}->{QueueID},
@@ -834,7 +835,7 @@ sub Run {
                 );
                 if ( $Permission ne 'rw' ) {
                     $NoPermission = 1;
-                    last;
+                    last NOTIFICATION;
                 }
             }
             if ($NoPermission) {
@@ -1678,6 +1679,7 @@ sub _Overview {
 
         # get valid list
         my %ValidList = $Kernel::OM->Get('Kernel::System::Valid')->ValidList();
+        NOTIFICATIONID:
         for my $NotificationID ( sort { $List{$a} cmp $List{$b} } keys %List ) {
 
             my %Data = $NotificationEventObject->NotificationGet(
@@ -1691,7 +1693,7 @@ sub _Overview {
                     UserID   => $Self->{UserID},
                 );
 
-                next if !$Data{Permission};
+                next NOTIFICATIONID if !$Data{Permission};
             }
 # EO LightAdmin
 

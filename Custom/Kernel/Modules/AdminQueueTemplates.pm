@@ -2,9 +2,9 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2025 Rother OSS GmbH, https://otobo.io/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
-# $origin: otobo - c4729719b9788da163909113055de495fac35df4 - Kernel/Modules/AdminQueueTemplates.pm
+# $origin: otobo - ff9e297baf287e16071d3ac6ad7f6c13f11ac7fa - Kernel/Modules/AdminQueueTemplates.pm
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -161,7 +161,7 @@ sub Run {
                 UserID => $Self->{UserID},
                 Type   => 'rw',
             );
-            
+
             if ( !$RwQueues{$ID} ) {
                 undef %QueueData;
                 undef %Member;
@@ -201,8 +201,9 @@ sub Run {
 
 # Rother OSS / LightAdmin
         if ( $Self->{LightAdmin} ) {
+            STANDARDTEMPLATEID:
             for my $StandardTemplateID ( keys %TemplatesSelected ) {
-                next if !$StandardTemplateID;  # Can contain empty string.
+                next STANDARDTEMPLATEID if !$StandardTemplateID;  # Can contain empty string.
 
                 my %Queues = $QueueObject->QueueStandardTemplateMemberList( StandardTemplateID => $StandardTemplateID );
                 my $Permission = $LightAdminObject->QueueListPermission(
@@ -213,7 +214,7 @@ sub Run {
                 if ( $Permission ne 'rw' ) {
                     return $LayoutObject->Redirect(
                         OP => "Action=$Self->{Action}"
-                    );                
+                    );
                 }
             }
         }
@@ -274,8 +275,9 @@ sub Run {
                 UserID => $Self->{UserID},
                 Type   => 'rw',
             );
+            QUEUEID:
             for my $QueueID ( keys %QueuesSelected ) {
-                next if !$QueueID;  # Can contain empty string.
+                next QUEUEID if !$QueueID;  # Can contain empty string.
                 if ( !$RwQueues{$QueueID} ) {
                     return $LayoutObject->Redirect(
                         OP => "Action=$Self->{Action}"
@@ -464,6 +466,7 @@ sub _Overview {
                 . ' - '
                 . $Data{Name};
         }
+        STANDARDTEMPLATEID:
         for my $StandardTemplateID (
             sort { uc( $StandardTemplateData{$a} ) cmp uc( $StandardTemplateData{$b} ) }
             keys %StandardTemplateData
@@ -478,7 +481,7 @@ sub _Overview {
                     Default  => 'rw',
                 );
                 if ( $Permission ne 'rw' ) {
-                    next;
+                    next STANDARDTEMPLATEID;
                 }
             }
 # EO LightAdmin

@@ -2,9 +2,9 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2025 Rother OSS GmbH, https://otobo.io/
+# Copyright (C) 2019-2026 Rother OSS GmbH, https://otobo.io/
 # --
-# $origin: otobo - c4729719b9788da163909113055de495fac35df4 - Kernel/Modules/AdminAttachment.pm
+# $origin: otobo - ff9e297baf287e16071d3ac6ad7f6c13f11ac7fa - Kernel/Modules/AdminAttachment.pm
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -444,6 +444,7 @@ sub _Overview {
 
         # get valid list
         my %ValidList = $Kernel::OM->Get('Kernel::System::Valid')->ValidList();
+        ID:
         for my $ID ( sort { $List{$a} cmp $List{$b} } keys %List ) {
             my %Data = $StdAttachmentObject->StdAttachmentGet(
                 ID => $ID,
@@ -456,7 +457,7 @@ sub _Overview {
                     ID      => $ID,
                     UserID  => $Self->{UserID},
                 );
-                next if !$Data{Permission};
+                next ID if !$Data{Permission};
             }
 # EO LightAdmin
 
